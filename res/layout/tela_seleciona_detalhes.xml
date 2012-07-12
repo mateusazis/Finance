@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical" >
+      
+      <TextView
+      android:id="@+id/textView1"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Detalhes"
+      android:textAppearance="?android:attr/textAppearanceLarge" />
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" >
+
+          <DatePicker
+              android:id="@+id/pickerData"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignParentRight="true"
+              android:layout_alignParentTop="true" />
+
+          <TextView
+              android:id="@+id/textView2"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_toLeftOf="@+id/datePicker1"
+              android:text="Data"
+              android:textAppearance="?android:attr/textAppearanceSmall" />
+
+      </RelativeLayout>
+
+      <Button
+          android:id="@+id/botaoCarregar"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:onClick="carregarMovimentacoes"
+          android:text="Carregar" />
+
+      <Button
+          android:id="@+id/button1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:onClick="exportar"
+          android:text="Exportar" />	
+      <!-- <ScrollView
+          android:id="@+id/scrollView1"
+          android:layout_width="match_parent"
+          android:layout_height="fill_parent" >
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="fill_parent" >
+
+              <TextView
+                  android:id="@+id/campoDetalhes"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+
+          </LinearLayout>
+      </ScrollView> -->
+
+</LinearLayout>

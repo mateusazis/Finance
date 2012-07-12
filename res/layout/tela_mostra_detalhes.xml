@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvDataDespesas"
+        android:background="#ffffff"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Exibindo despesas de:"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ListView
+        android:id="@+id/lista_movimentacoes"
+        android:layout_width="match_parent"
+        android:layout_height="328dp"
+        android:layout_weight="1" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/tvTotal"
+        android:background="#ffffff"
+        android:textColor="#000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total: "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</LinearLayout>
