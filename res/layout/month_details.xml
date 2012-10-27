@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_vertical|left"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvMonth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mês"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+    </View>
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ganhos: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gastos: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tvHighestExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maior Gasto: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp" />
+
+    <TextView
+        android:id="@+id/tvHighestInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maior Ganho: "
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</LinearLayout>

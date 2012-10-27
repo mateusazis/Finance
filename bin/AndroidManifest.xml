@@ -23,6 +23,7 @@
         <activity android:name=".TelaSelecionaDetalhes"></activity>
         <activity android:name=".TelaMostraDetalhes" android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity android:name=".TelaModificacao"></activity>
+        <activity android:name=".MonthDetails"></activity>
     </application>
 
 </manifest>
