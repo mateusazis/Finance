@@ -13,7 +13,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Nome"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
 <EditText
     android:id="@+id/campoNome"
     android:layout_width="match_parent"
@@ -29,7 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
-
+
+
+
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -42,44 +46,22 @@
 	        android:layout_height="wrap_content"
 	        android:text="Valor"
 	        android:textAppearance="?android:attr/textAppearanceLarge" />
-
+
+
+
+
         <EditText
             android:id="@+id/campoValor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="numberDecimal" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.50"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/TextView02"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quantidade"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
-        <EditText
-            android:id="@+id/campoQtd"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="number"
-            android:text="1" />
-    </LinearLayout>
-</LinearLayout>   
-        
         <LinearLayout
             android:id="@+id/LinearLayout03"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
+
+
             <TextView
                 android:id="@+id/TextView03"
                 android:layout_width="wrap_content"
@@ -88,13 +70,16 @@
                 android:layout_weight="1"
                 android:text="Tipo"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-
+
+
+
             <RadioGroup
                 android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1" >
-                <RadioButton
+
+                <RadioButton
                     android:id="@+id/botaoDespesa"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -118,6 +103,32 @@
 
         </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/TextView02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantidade"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <NumberPicker
+            android:id="@+id/campoQtd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:text="1" />
+    </LinearLayout>
+</LinearLayout>   
+        
+        
+
         <LinearLayout
             android:id="@+id/LinearLayout02"
             android:layout_width="match_parent"
@@ -130,11 +141,13 @@
                 android:layout_gravity="center_vertical"
                 android:text="Data"
                 android:textAppearance="?android:attr/textAppearanceLarge" />
-
+
             <DatePicker
                 android:id="@+id/pickerData"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:calendarViewShown="false"
+                android:spinnersShown="true" />
 
         </LinearLayout>
 
@@ -142,7 +155,9 @@
             android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
-
+
+
+
             <Button
                 android:id="@+id/botaoAdd"
                 android:layout_width="wrap_content"

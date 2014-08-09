@@ -4,12 +4,13 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" />
+    <uses-sdk android:minSdkVersion="14" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
+        android:theme="@android:style/Theme.Holo"
         android:icon="@drawable/money_icon"
-        android:label="@string/app_name" android:debuggable="true" android:allowBackup="true">
+        android:label="@string/app_name" android:allowBackup="true">
         <activity
             android:name=".FinanceActivity"
             android:label="@string/app_name" >
@@ -19,7 +20,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="TelaAdd"></activity>
+        <activity android:name="TelaAdd" android:theme="@android:style/Theme.Holo.NoActionBar"></activity>
         <activity android:name=".TelaSelecionaDetalhes"></activity>
         <activity android:name=".TelaMostraDetalhes" android:theme="@android:style/Theme.NoTitleBar"></activity>
         <activity android:name=".TelaModificacao"></activity>

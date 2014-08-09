@@ -17,6 +17,7 @@
           android:layout_height="wrap_content" >
 
           <DatePicker
+              android:calendarViewShown="false"
               android:id="@+id/pickerData"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"

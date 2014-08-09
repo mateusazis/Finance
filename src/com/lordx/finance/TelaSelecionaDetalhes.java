@@ -21,6 +21,24 @@ public class TelaSelecionaDetalhes extends Activity {
 		super.onCreate(b);
 		setContentView(R.layout.tela_seleciona_detalhes);
 		pickerData = (DatePicker)findViewById(R.id.pickerData);
+		hideDays(pickerData);
+	}
+	
+	//ref: http://stackoverflow.com/questions/14731843/hide-day-from-datepicker
+	private static void hideDays(DatePicker picker){
+		try {
+		    java.lang.reflect.Field[] f = picker.getClass().getDeclaredFields();
+		    for (java.lang.reflect.Field field : f) {
+		        if (field.getName().equals("mDayPicker") || field.getName().equals("mDaySpinner")) {
+		           field.setAccessible(true);
+		           Object dmPicker = new Object();
+		           dmPicker = field.get(picker);
+		           ((View) dmPicker).setVisibility(View.GONE);
+		        }
+		    }
+		}catch(Exception e){
+			Log.e("Finance", e.getMessage());
+		}
 	}
 	
 	public void carregarMovimentacoes(View v){

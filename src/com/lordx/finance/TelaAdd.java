@@ -8,13 +8,15 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.NumberPicker;
 import android.widget.RadioButton;
 import android.widget.DatePicker;
 import android.widget.Toast;
 
 public class TelaAdd extends Activity {
 
-	protected EditText campoNome, campoValor, campoQtd;
+	protected EditText campoNome, campoValor;
+	protected NumberPicker campoQtd;
 	protected DatePicker timePicker;
 	protected RadioButton botaoDespesa;
 	
@@ -26,7 +28,9 @@ public class TelaAdd extends Activity {
 		setContentView(R.layout.tela_add);
 		campoNome = (EditText)findViewById(R.id.campoNome);
 		campoValor = (EditText)findViewById(R.id.campoValor);
-		campoQtd = (EditText)findViewById(R.id.campoQtd);
+		campoQtd = (NumberPicker)findViewById(R.id.campoQtd);
+		campoQtd.setMaxValue(10);
+		campoQtd.setMinValue(1);
 		timePicker = (DatePicker)findViewById(R.id.pickerData);
 		botaoDespesa = (RadioButton)findViewById(R.id.botaoDespesa);
 	}
@@ -45,7 +49,7 @@ public class TelaAdd extends Activity {
 			showDialog(DIALOG_VALOR_INVALIDO);
 			return;
 		}
-		int qtd = Integer.parseInt(campoQtd.getText().toString());
+		int qtd = campoQtd.getValue();
 		boolean ehDespesa = botaoDespesa.isChecked();
 		Date data = new Date(timePicker);
 		Movimentacao m = new Movimentacao(nome, qtd, valor, data, ehDespesa);

@@ -26,7 +26,7 @@ public class TelaModificacao extends TelaAdd {
 		if(!ehDepesa)
 			valor *= -1;
 		campoValor.setText(valor + "");
-		campoQtd.setText(velha.getQtd() + "");
+		campoQtd.setValue(velha.getQtd());
 		Date data = velha.getData();
 		timePicker.updateDate(data.getYear(), data.getMonth() - 1, data.getDay());
 	}
@@ -45,7 +45,7 @@ public class TelaModificacao extends TelaAdd {
 			showDialog(DIALOG_VALOR_INVALIDO);
 			return;
 		}
-		int qtd = Integer.parseInt(campoQtd.getText().toString());
+		int qtd = campoQtd.getValue();
 		boolean ehDespesa = botaoDespesa.isChecked();
 		Date data = new Date(timePicker);
 		Movimentacao nova = new Movimentacao(nome, qtd, valor, data, ehDespesa);
@@ -54,7 +54,7 @@ public class TelaModificacao extends TelaAdd {
 		if(Operacoes.modificar(this, velha, nova))
 			msg = "Despesa modificada com sucesso.";
 		else
-			msg = "Erro na modificação da despesa.";
+			msg = "Erro na modificaï¿½ï¿½o da despesa.";
 		Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 		finish();
 	}	
