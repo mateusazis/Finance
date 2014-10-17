@@ -61,4 +61,10 @@ public class TelaModificacao extends TelaAdd {
 		Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 		finish();
 	}	
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		velha = null;
+	}
 }

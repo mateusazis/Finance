@@ -71,4 +71,11 @@ public class MonthDetails extends Activity {
 			return "nenhum"; 
 		return String.format("%s (R$ %.2f) @ %s", m.getNome(), Math.abs(m.getValor()),m.getData());
 	}
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		detailedMonth = null;
+		movs = null;
+	}
 }

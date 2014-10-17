@@ -100,4 +100,10 @@ public class TelaMostraDetalhes extends Activity implements OnItemClickListener{
 		startActivity(i);
 		return true;
 	}
+	
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		data = null;
+	}
 }
