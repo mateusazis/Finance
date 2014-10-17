@@ -1,5 +1,7 @@
 package com.lordx.finance;
 
+import java.util.Locale;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,10 +24,11 @@ public class TelaModificacao extends TelaAdd {
 		boolean ehDepesa = velha.isDespesa();
 		group.check(ehDepesa ? R.id.botaoDespesa : R.id.botaoLucro);
 		campoNome.setText(velha.getNome());
-		float valor = velha.getValor();
-		if(!ehDepesa)
-			valor *= -1;
-		campoValor.setText(valor + "");
+		float valor = Math.abs(velha.getValor());
+		if(valor == (int)valor)
+			campoValor.setText(String.format("%d", (int)valor));
+		else
+			campoValor.setText(String.format(Locale.US, "%.2f", valor));
 		campoQtd.setValue(velha.getQtd());
 		Date data = velha.getData();
 		timePicker.updateDate(data.getYear(), data.getMonth() - 1, data.getDay());

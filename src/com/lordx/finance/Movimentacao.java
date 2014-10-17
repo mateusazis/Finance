@@ -37,7 +37,8 @@ public class Movimentacao implements Serializable, Comparable<Movimentacao>{
 	}
 	
 	public float getValor(){
-		return valor;
+		//invert, as profits are stored as negative and expenses as positive
+		return -valor;
 	}
 	
 	public boolean isDespesa(){
@@ -47,12 +48,12 @@ public class Movimentacao implements Serializable, Comparable<Movimentacao>{
 	@Override
 	public String toString(){
 		String formato = "%s\n%s: %d x %.2f = %.2f";
-		return String.format(formato, data.toString(), nome, qtd, valor, qtd*valor);
+		return String.format(formato, data.toString(), nome, qtd, getValor(), qtd*valor);
 	}
 	
 	public String toStringSemData(){
 		String formato = "%s: %d x %.2f = %.2f";
-		return String.format(formato, nome, qtd, valor, qtd*valor);
+		return String.format(formato, nome, qtd, getValor(), qtd*valor);
 	}
 
 	@Override
