@@ -39,12 +39,12 @@ public class MonthDetails extends Activity {
 		for(Movimentacao m : movs){
 			if(m.isDespesa()){
 				output += m.getValor();
-				if(highestExpense == null || m.getValor() > highestExpense.getValor())
+				if(highestExpense == null || Math.abs(m.getValor()) > Math.abs(highestExpense.getValor()))
 					highestExpense = m;
 			}
 			else{
 				input += m.getValor();
-				if(highestInput == null || m.getValor() < highestInput.getValor())
+				if(highestInput == null || Math.abs(m.getValor()) > Math.abs(highestInput.getValor()))
 					highestInput = m;
 			}
 		}
