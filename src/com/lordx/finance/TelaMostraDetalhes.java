@@ -45,7 +45,7 @@ public class TelaMostraDetalhes extends Activity implements OnItemClickListener{
 		Adapter a = new Adapter(this, R.layout.layout_view_detalhes, movs);
 		lv.setAdapter(a);
 		float total = calculaTotal();
-		tvTotal.setText(String.format("Total: R$ %.2f", total));
+		tvTotal.setText(String.format("Saldo: R$ %.2f", total));
 		tvDataDesps.setText(String.format("Exibindo movimentações de: %d/%d", data.getMonth(), data.getYear()));
 	}
 	
